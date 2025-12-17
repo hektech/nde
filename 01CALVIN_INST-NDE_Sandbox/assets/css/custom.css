@@ -32,6 +32,10 @@ html {
   font-weight: 366;
 }
 
+.flex-row {
+  align-items: center;
+}
+
 section.container > main.sub-container > div.search-container > div.top-bar-background-image > div.custom-search-bar-container > h2 {
   font-family: 'Fjalla One', sans-serif;
   font-weight: normal;
