@@ -39,3 +39,29 @@ console.log('Helo from custom js');
         }
     }, 2000);
 })();
+
+
+// Add Google Analytics GA4 gtag.js
+
+(function addGoogleAnalytics() {
+  // Avoid adding it twice
+  if (document.getElementById('ga-gtag-script')) return;
+
+  // 1) Load gtag.js
+  const gtagScript = document.createElement('script');
+  gtagScript.id = 'ga-gtag-script';
+  gtagScript.async = true;
+  gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-31PBLWBMCJ';
+  document.head.appendChild(gtagScript);
+
+  // 2) Inline config script
+  const inlineScript = document.createElement('script');
+  inlineScript.innerHTML = `
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-31PBLWBMCJ');
+  `;
+  document.head.appendChild(inlineScript);
+})();
+
