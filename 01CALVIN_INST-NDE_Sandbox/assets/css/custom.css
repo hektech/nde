@@ -32,7 +32,7 @@ html {
   font-weight: 366;
 }
 
-.container[_ngcontent-ng-c2322225156] .custom-search-bar-container[_ngcontent-ng-c2322225156] h2[_ngcontent-ng-c2322225156] {
+section.container > main.sub-container > div.search-container > div.top-bar-background-image > div.custom-search-bar-container > h2 {
   font-family: 'Fjalla One', sans-serif;
   font-weight: normal;
   text-shadow: 2px 2px 10px rgba(0, 0, 0, .5);
@@ -48,7 +48,7 @@ nde-resource-recommender-card .carousel-resource-recommender-card mat-card-conte
 }
 
 /* Change record type text color */
-nde-record-type>span.record-type[_ngcontent-ng-c762254878] {
+div.record-top-bar > nde-record-type>span.record-type {
   color: var(--darkText);
 }
 
@@ -58,13 +58,13 @@ nde-record-type>span.record-type[_ngcontent-ng-c762254878] {
 }
 
 /* Adjust search bar input field styles */
-.search-bar-container[_ngcontent-ng-c1794170064] .search-input-field[_ngcontent-ng-c1794170064] {
+#main-search-bar {
   font-size: 1.07rem;
   line-height: 3;
 }
 
 /* give more space between report problem/top page links and libchat */
-.side-bottom-buttons[_ngcontent-ng-c2322225156] {
+main.sub-container > div.search-container > div.side-bottom-buttons {
   inset-block-end: 3.5rem;
 } 
 
