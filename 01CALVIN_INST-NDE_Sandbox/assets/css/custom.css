@@ -1,0 +1,76 @@
+/* Calvin fonts */
+/* latin-ext */
+@font-face {
+  font-family: 'Fjalla One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/fjallaone/v13/Yq6R-LCAWCX3-6Ky7FAFrO96kigt.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Fjalla One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/fjallaone/v13/Yq6R-LCAWCX3-6Ky7FAFrOF6kg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+  --sys-primary: #8c2131;
+  --sys-outline: #555;
+}
+
+html {
+  font-size: 18px;
+}
+
+.light-text {
+  font-weight: 366;
+}
+
+.container[_ngcontent-ng-c2322225156] .custom-search-bar-container[_ngcontent-ng-c2322225156] h2[_ngcontent-ng-c2322225156] {
+  font-family: 'Fjalla One', sans-serif;
+  font-weight: normal;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, .5);
+  letter-spacing: .024rem;
+}
+
+/* Adjust thumbnail image width in search results */
+prm-search-result-thumbnail-container img {
+  width: auto;
+}
+nde-resource-recommender-card .carousel-resource-recommender-card mat-card-content .resource-img {
+  object-fit: contain !important;
+}
+
+/* Change record type text color */
+nde-record-type>span.record-type[_ngcontent-ng-c762254878] {
+  color: var(--darkText);
+}
+
+/* Adjust font size for record titles */
+.mat-typography nde-record-title span.mat-body-medium {
+  font-size: 1.07rem;
+}
+
+/* Adjust search bar input field styles */
+.search-bar-container[_ngcontent-ng-c1794170064] .search-input-field[_ngcontent-ng-c1794170064] {
+  font-size: 1.07rem;
+  line-height: 3;
+}
+
+/* give more space between report problem/top page links and libchat */
+.side-bottom-buttons[_ngcontent-ng-c2322225156] {
+  inset-block-end: 3.5rem;
+} 
+
+/* temporarily hide no search results message until we go live with NDE */
+.did-you-mean-container .no-record-found,
+.no-results-container .did-you-mean-container .no-results,
+.ng-star-inserted .no-results-container .we-suggest-container {
+    display:none;
+}
