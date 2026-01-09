@@ -333,6 +333,14 @@ h2.carousel-title {
   transition: all 0.2s ease-in-out;
 }
 
+.content:has(img[src*="default.png"]) .content-overlay {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.content:has(img[src*="default.png"]):hover .content-overlay {
+  background: rgba(0, 0, 0, 0.9);
+}
+
 .content:hover .content-overlay {
   opacity: 1;
   background: rgba(0, 0, 0, 0.6);
@@ -359,6 +367,7 @@ h2.carousel-title {
   transition: all 0.2s ease-in-out;
 }
 
+.content:has(img[src*="default.png"]) .content-details,
 .content:hover .content-details {
   opacity: 1;
 }
@@ -505,28 +514,7 @@ h2.carousel-title {
   gap: 0.2rem;
 }
 
-/* Fallback arrow indicators for browsers that don't support ::scroll-button (e.g., Firefox) */
-
 @supports not selector(::scroll-marker-group) {
-  .carousel::after {
-    content: 'Scroll for more ›';
-    position: sticky;
-    top: 0%;
-    right: 0;
-    padding: 0.35rem 0.75rem;
-    background: rgba(140, 33, 49, 0.85);
-    color: rgba(255, 215, 0, 0.95);
-    /* gold */
-    font-size: 0.95rem;
-    max-height: 2rem;
-    font-weight: 600;
-    pointer-events: none;
-    z-index: 1;
-    white-space: nowrap;
-    display: inline-flex;
-    align-items: center;
-    flex-shrink: 0;
-  }
 
   #new-books-1 {
     scrollbar-width: auto;
@@ -537,10 +525,10 @@ h2.carousel-title {
   }
 }
 
-.container .sub-container > .search-container > .top-bar-background-image > .custom-search-bar-container {
+.container .sub-container>.search-container>.top-bar-background-image>.custom-search-bar-container {
   height: 20rem;
 }
 
-.ng-star-inserted > .home-page-container  {
+.ng-star-inserted>.home-page-container {
   margin-top: 2.5rem;
 }

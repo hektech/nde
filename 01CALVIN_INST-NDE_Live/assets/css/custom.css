@@ -36,7 +36,7 @@ html {
   align-items: center;
 }
 
-section.container > main.sub-container > div.search-container > div.top-bar-background-image > div.custom-search-bar-container > h2 {
+section.container>main.sub-container>div.search-container>div.top-bar-background-image>div.custom-search-bar-container>h2 {
   font-family: 'Fjalla One', sans-serif;
   font-weight: normal;
   text-shadow: 2px 2px 10px rgba(0, 0, 0, .5);
@@ -47,12 +47,13 @@ section.container > main.sub-container > div.search-container > div.top-bar-back
 prm-search-result-thumbnail-container img {
   width: auto;
 }
+
 nde-resource-recommender-card .carousel-resource-recommender-card mat-card-content .resource-img {
   object-fit: contain !important;
 }
 
 /* Change record type text color */
-div.record-top-bar > nde-record-type>span.record-type {
+div.record-top-bar>nde-record-type>span.record-type {
   color: var(--darkText);
 }
 
@@ -68,13 +69,24 @@ div.record-top-bar > nde-record-type>span.record-type {
 }
 
 /* give more space between report problem/top page links and libchat */
-main.sub-container > div.search-container > div.side-bottom-buttons {
+main.sub-container>div.search-container>div.side-bottom-buttons {
   inset-block-end: 3.5rem;
-} 
+}
 
 /* temporarily hide no search results message until we go live with NDE */
 .did-you-mean-container .no-record-found,
 .no-results-container .did-you-mean-container .no-results,
 .ng-star-inserted .no-results-container .we-suggest-container {
-    display:none;
+  display: none;
+}
+
+/* make hold request language more specific */
+nde-requests nde-login a::after {
+  content: "to place ON HOLD"
+}
+
+/* show plus sign when collapsed */
+.mat-expansion-panel-header-description mat-icon.nde-mat-icon-size-default {
+    min-width: 20px;
+    min-height: 20px;
 }
