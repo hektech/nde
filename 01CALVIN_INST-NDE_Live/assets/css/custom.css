@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Montserrat:wght@400;500;600&display=swap');
+
 /* Calvin fonts */
 /* latin-ext */
 @font-face {
@@ -87,6 +89,46 @@ nde-requests nde-login a::after {
 
 /* show plus sign when collapsed */
 .mat-expansion-panel-header-description mat-icon.nde-mat-icon-size-default {
-    min-width: 20px;
-    min-height: 20px;
+  min-width: 20px;
+  min-height: 20px;
 }
+
+/* BEGIN login page */
+nde-login-form-content>div>div>h1.login-header.dedicated-login-page-header {
+  font-family: 'Fjalla One', sans-serif;
+  letter-spacing: .05rem;
+  font-size: 2.5rem;
+}
+
+nde-login-form-content mat-dialog-content>div.authentication-method-wrapper>div.authentication-method-btn.display-flex {
+  border: 1px solid var(--mdc-text-button-label-text-color, var(--mat-sys-primary)) !important;
+}
+
+nde-login-form-content mat-dialog-content>div.authentication-method-wrapper>div.authentication-method-btn.display-flex>button.dedicated-login-page {
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+}
+
+nde-login-form-content mat-dialog-content>div.authentication-method-wrapper > div.authentication-method-btn.display-flex > button.dedicated-login-page div.authentication-method > span {
+  font-size: 1rem !important;
+}
+
+nde-login-form-content mat-dialog-content>div.authentication-method-wrapper > div.authentication-method-btn.display-flex .authentication-method-description {
+  font-size: 0.875rem !important;
+}
+
+/* Hide the original image */
+nde-login-page div.image-section img,
+nde-login-page div.mobile-image-section img {
+    display: none;
+}
+
+/* Displaying new image */
+nde-login-page div.image-section,
+nde-login-page div.mobile-image-section {
+   background-image: url(https://d2jv02qf7xgjwx.cloudfront.net/customers/726/images/CF_-_Tourguide_Photoshoot_Winter_-_2025-015.jpg);
+   background-size: cover;
+   background-position: center;
+} 
+
+/* END login page */
