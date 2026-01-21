@@ -1,6 +1,6 @@
+/* Calvin fonts */
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Montserrat:wght@400;500;600&display=swap');
 
-/* Calvin fonts */
 /* latin-ext */
 @font-face {
   font-family: 'Fjalla One';
@@ -116,19 +116,5 @@ nde-login-form-content mat-dialog-content>div.authentication-method-wrapper > di
 nde-login-form-content mat-dialog-content>div.authentication-method-wrapper > div.authentication-method-btn.display-flex .authentication-method-description {
   font-size: 0.875rem !important;
 }
-
-/* Hide the original image */
-nde-login-page div.image-section img,
-nde-login-page div.mobile-image-section img {
-    display: none;
-}
-
-/* Displaying new image */
-nde-login-page div.image-section,
-nde-login-page div.mobile-image-section {
-   background-image: url(https://d2jv02qf7xgjwx.cloudfront.net/customers/726/images/CF_-_Tourguide_Photoshoot_Winter_-_2025-015.jpg);
-   background-size: cover;
-   background-position: center;
-} 
 
 /* END login page */
