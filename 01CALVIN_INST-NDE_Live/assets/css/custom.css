@@ -109,12 +109,31 @@ nde-login-form-content mat-dialog-content>div.authentication-method-wrapper>div.
   text-align: left;
 }
 
-nde-login-form-content mat-dialog-content>div.authentication-method-wrapper > div.authentication-method-btn.display-flex > button.dedicated-login-page div.authentication-method > span {
+nde-login-form-content mat-dialog-content>div.authentication-method-wrapper>div.authentication-method-btn.display-flex>button.dedicated-login-page div.authentication-method>span {
   font-size: 1rem !important;
 }
 
-nde-login-form-content mat-dialog-content>div.authentication-method-wrapper > div.authentication-method-btn.display-flex .authentication-method-description {
+nde-login-form-content mat-dialog-content>div.authentication-method-wrapper>div.authentication-method-btn.display-flex .authentication-method-description {
   font-size: 0.875rem !important;
 }
 
 /* END login page */
+
+/* BEGIN Hide Jesus image */
+nde-linked-data-recommendations .thumbnail-image[alt="Photo of Jesus Christ"] {
+  display: none;
+}
+
+nde-linked-data-recommendations .thumbnail-image[alt="Photo of Jesus Christ"]+.thumbnail-license-icon-container {
+  display: none;
+}
+
+nde-person-entity .thumbnail-image[alt="Photo of Jesus Christ"] {
+  display: none;
+}
+
+nde-person-entity .thumbnail-image[alt="Photo of Jesus Christ"]+.thumbnail-license-icon-container {
+  display: none;
+}
+
+/* END Hide Jesus image */
