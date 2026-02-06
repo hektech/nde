@@ -1,0 +1,139 @@
+/* Calvin fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Montserrat:wght@400;500;600&display=swap');
+
+/* latin-ext */
+@font-face {
+  font-family: 'Fjalla One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/fjallaone/v13/Yq6R-LCAWCX3-6Ky7FAFrO96kigt.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Fjalla One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/fjallaone/v13/Yq6R-LCAWCX3-6Ky7FAFrOF6kg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+  --sys-primary: #8c2131;
+  --sys-outline: #555;
+}
+
+html {
+  font-size: 18px;
+}
+
+.light-text {
+  font-weight: 366;
+}
+
+.flex-row {
+  align-items: center;
+}
+
+section.container>main.sub-container>div.search-container>div.top-bar-background-image>div.custom-search-bar-container>h2 {
+  font-family: 'Fjalla One', sans-serif;
+  font-weight: normal;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, .5);
+  letter-spacing: .024rem;
+}
+
+/* Adjust thumbnail image width in search results */
+prm-search-result-thumbnail-container img {
+  width: auto;
+}
+
+nde-resource-recommender-card .carousel-resource-recommender-card mat-card-content .resource-img {
+  object-fit: contain !important;
+}
+
+/* Change record type text color */
+div.record-top-bar>nde-record-type>span.record-type {
+  color: var(--darkText);
+}
+
+/* Adjust font size for record titles */
+.mat-typography nde-record-title span.mat-body-medium {
+  font-size: 1.07rem;
+}
+
+/* Adjust search bar input field styles */
+#main-search-bar {
+  font-size: 1.07rem;
+  line-height: 3;
+}
+
+/* give more space between report problem/top page links and libchat */
+main.sub-container>div.search-container>div.side-bottom-buttons {
+  inset-block-end: 3.5rem;
+}
+
+/* temporarily hide no search results message until we go live with NDE */
+.did-you-mean-container .no-record-found,
+.no-results-container .did-you-mean-container .no-results,
+.ng-star-inserted .no-results-container .we-suggest-container {
+  display: none;
+}
+
+/* make hold request language more specific */
+nde-requests nde-login a::after {
+  content: "to place ON HOLD"
+}
+
+/* show plus sign when collapsed */
+.mat-expansion-panel-header-description mat-icon.nde-mat-icon-size-default {
+  min-width: 20px;
+  min-height: 20px;
+}
+
+/* BEGIN login page */
+nde-login-form-content>div>div>h1.login-header.dedicated-login-page-header {
+  font-family: 'Fjalla One', sans-serif;
+  letter-spacing: .05rem;
+  font-size: 2.5rem;
+}
+
+nde-login-form-content mat-dialog-content>div.authentication-method-wrapper>div.authentication-method-btn.display-flex {
+  border: 1px solid var(--mdc-text-button-label-text-color, var(--mat-sys-primary)) !important;
+}
+
+nde-login-form-content mat-dialog-content>div.authentication-method-wrapper>div.authentication-method-btn.display-flex>button.dedicated-login-page {
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+}
+
+nde-login-form-content mat-dialog-content>div.authentication-method-wrapper>div.authentication-method-btn.display-flex>button.dedicated-login-page div.authentication-method>span {
+  font-size: 1rem !important;
+}
+
+nde-login-form-content mat-dialog-content>div.authentication-method-wrapper>div.authentication-method-btn.display-flex .authentication-method-description {
+  font-size: 0.875rem !important;
+}
+
+/* END login page */
+
+/* BEGIN Hide Jesus image */
+nde-linked-data-recommendations .thumbnail-image[alt="Photo of Jesus Christ"] {
+  display: none;
+}
+
+nde-linked-data-recommendations .thumbnail-image[alt="Photo of Jesus Christ"]+.thumbnail-license-icon-container {
+  display: none;
+}
+
+nde-person-entity .thumbnail-image[alt="Photo of Jesus Christ"] {
+  display: none;
+}
+
+nde-person-entity .thumbnail-image[alt="Photo of Jesus Christ"]+.thumbnail-license-icon-container {
+  display: none;
+}
+
+/* END Hide Jesus image */
