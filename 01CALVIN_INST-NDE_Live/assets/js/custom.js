@@ -64,3 +64,33 @@ console.log('Helo from custom js');
   `;
   document.head.appendChild(inlineScript);
 })();
+
+
+// Classic Primo URL Converter
+
+(function () {
+  const classicLink = document.querySelector(
+    `a.main-menu-label[aria-label="Classic Search, opens in a new window"]`
+  );
+
+  if (classicLink) {
+    classicLink.addEventListener('click', () => {
+      const currentURL = window.location.href;
+
+      if (!currentURL.includes('search?')) return;
+
+      const url = new URL(currentURL);
+      const searchTerm = url.searchParams.get('query') || '';
+      const tab = url.searchParams.get('tab') || 'Everything';
+      const searchScope = url.searchParams.get('search_scope') || 'MyInst_and_CI';
+
+      classicLink.href =
+        `https://calvin.primo.exlibrisgroup.com/discovery/search` +
+        `?query=any,contains,${searchTerm}` +
+        `&tab=${tab}` +
+        `&search_scope=${searchScope}` +
+        `&vid=01CALVIN_INST:Primo_Classic` +
+        `&offset=0`;
+    });
+  }
+})();
