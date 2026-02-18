@@ -1,5 +1,6 @@
 console.log('Helo from custom js');
 
+//Add libchat
 (() => {
   const libchatHash = '1d73d9fc08accd85165ff98853a6f31d';
   const almaStr = `https://${location.hostname}/discovery/delivery/`; // indicates Alma viewer
@@ -42,7 +43,6 @@ console.log('Helo from custom js');
 
 
 // Add Google Analytics GA4 gtag.js
-
 (function addGoogleAnalytics() {
   // Avoid adding it twice
   if (document.getElementById('ga-gtag-script')) return;
@@ -65,32 +65,13 @@ console.log('Helo from custom js');
   document.head.appendChild(inlineScript);
 })();
 
-
-// Classic Primo URL Converter
-
+// Redirect openurl to Primo
 (function () {
-  const classicLink = document.querySelector(
-    `a.main-menu-label[aria-label="Classic Search, opens in a new window"]`
-  );
-
-  if (classicLink) {
-    classicLink.addEventListener('click', () => {
-      const currentURL = window.location.href;
-
-      if (!currentURL.includes('search?')) return;
-
-      const url = new URL(currentURL);
-      const searchTerm = url.searchParams.get('query') || '';
-      const tab = url.searchParams.get('tab') || 'Everything';
-      const searchScope = url.searchParams.get('search_scope') || 'MyInst_and_CI';
-
-      classicLink.href =
-        `https://calvin.primo.exlibrisgroup.com/discovery/search` +
-        `?query=any,contains,${searchTerm}` +
-        `&tab=${tab}` +
-        `&search_scope=${searchScope}` +
-        `&vid=01CALVIN_INST:Primo_Classic` +
-        `&offset=0`;
-    });
+  let currentURL = window.location.href;
+  if (currentURL.includes('openurl?')) {
+    let newUrl = new URL(currentURL);
+    newUrl.pathname = "/discovery/openurl";
+    newUrl.searchParams.set("vid", "01CALVIN_INST:PrimoOpenURL");
+    window.location.href = newUrl;
   }
 })();
