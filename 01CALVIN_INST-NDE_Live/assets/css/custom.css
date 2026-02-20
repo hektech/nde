@@ -76,11 +76,11 @@ main.sub-container>div.search-container>div.side-bottom-buttons {
 }
 
 /* temporarily hide no search results message until we go live with NDE */
-.did-you-mean-container .no-record-found,
+/* .did-you-mean-container .no-record-found,
 .no-results-container .did-you-mean-container .no-results,
 .ng-star-inserted .no-results-container .we-suggest-container {
   display: none;
-}
+} */
 
 /* make hold request language more specific */
 nde-requests nde-login a::after {
@@ -92,6 +92,7 @@ nde-requests nde-login a::after {
   min-width: 20px;
   min-height: 20px;
 }
+
 
 /* BEGIN login page */
 nde-login-form-content>div>div>h1.login-header.dedicated-login-page-header {
@@ -119,6 +120,7 @@ nde-login-form-content mat-dialog-content>div.authentication-method-wrapper>div.
 
 /* END login page */
 
+
 /* BEGIN Hide Jesus image */
 nde-linked-data-recommendations .thumbnail-image[alt="Photo of Jesus Christ"] {
   display: none;
@@ -137,3 +139,58 @@ nde-person-entity .thumbnail-image[alt="Photo of Jesus Christ"]+.thumbnail-licen
 }
 
 /* END Hide Jesus image */
+
+/* BEGIN No Results Page */
+.no-record-found>h2 {
+  font-family: 'Fjalla One', sans-serif;
+  letter-spacing: .05rem;
+  font-size: 145%;
+  font-weight: normal;
+  color: #333;
+}
+
+/*hide main Mel and ILL*/
+nde-search-results:has(nde-search-no-results)+ng-component:has(div.ill_recommender) {
+  display: none;
+}
+
+/*add MeL icon*/
+nde-search-no-results a[href^="https://search.mel.org"]::before {
+  content: "";
+  display: inline-block;
+  width: 25px;          
+  height: 25px;         
+  margin: 0 0.75rem 0 0.25rem;
+  background-image: url("https://d2jv02qf7xgjwx.cloudfront.net/customers/726/images/mel_icon_50x50.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+
+/*add Worldcat icon*/
+nde-search-no-results a[href^="https://search.worldcat.org"]::before {
+  content: "";
+  display: inline-block;
+  width: 36px;         
+  height: 36px;         
+  margin-right: 0.35rem;
+  background-image: url("https://d2jv02qf7xgjwx.cloudfront.net/customers/726/images/worldcat-logo_100x100.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+
+/*add ILL icon*/
+nde-search-no-results a[href^="https://library.calvin.edu/request/ill"]::before {
+  content: "";
+  display: inline-block;
+  width: 30px;         
+  height: 30px;         
+  margin: 0 0.35rem 0 0.25rem;
+  background-image: url("https://d2jv02qf7xgjwx.cloudfront.net/customers/726/images/globe_blue.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+
+/* END No Results Page */

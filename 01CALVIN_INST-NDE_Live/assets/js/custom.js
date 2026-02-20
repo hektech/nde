@@ -41,7 +41,6 @@ console.log('Helo from custom js');
   }, 2000);
 })();
 
-
 // Add Google Analytics GA4 gtag.js
 (function addGoogleAnalytics() {
   // Avoid adding it twice
