@@ -59,6 +59,19 @@ div.record-top-bar>nde-record-type>span.record-type {
   color: var(--darkText);
 }
 
+/* Quicklinks */
+.mdc-button__label b {
+  font-weight: normal;
+}
+
+/* Call Number Selectable */
+nde-physical-availability-line .mat-mdc-button {
+  font-weight: normal;
+  -webkit-user-select: text;
+  /* Safari */
+  user-select: text;
+}
+
 /* Adjust font size for record titles */
 .mat-typography nde-record-title span.mat-body-medium {
   font-size: 1.07rem;
@@ -74,13 +87,6 @@ div.record-top-bar>nde-record-type>span.record-type {
 main.sub-container>div.search-container>div.side-bottom-buttons {
   inset-block-end: 3.5rem;
 }
-
-/* temporarily hide no search results message until we go live with NDE */
-/* .did-you-mean-container .no-record-found,
-.no-results-container .did-you-mean-container .no-results,
-.ng-star-inserted .no-results-container .we-suggest-container {
-  display: none;
-} */
 
 /* make hold request language more specific */
 nde-requests nde-login a::after {
@@ -158,8 +164,8 @@ nde-search-results:has(nde-search-no-results)+ng-component:has(div.ill_recommend
 nde-search-no-results a[href^="https://search.mel.org"]::before {
   content: "";
   display: inline-block;
-  width: 25px;          
-  height: 25px;         
+  width: 25px;
+  height: 25px;
   margin: 0 0.75rem 0 0.25rem;
   background-image: url("https://d2jv02qf7xgjwx.cloudfront.net/customers/726/images/mel_icon_50x50.jpg");
   background-size: contain;
@@ -171,8 +177,8 @@ nde-search-no-results a[href^="https://search.mel.org"]::before {
 nde-search-no-results a[href^="https://search.worldcat.org"]::before {
   content: "";
   display: inline-block;
-  width: 36px;         
-  height: 36px;         
+  width: 36px;
+  height: 36px;
   margin-right: 0.35rem;
   background-image: url("https://d2jv02qf7xgjwx.cloudfront.net/customers/726/images/worldcat-logo_100x100.jpg");
   background-size: contain;
@@ -184,8 +190,8 @@ nde-search-no-results a[href^="https://search.worldcat.org"]::before {
 nde-search-no-results a[href^="https://library.calvin.edu/request/ill"]::before {
   content: "";
   display: inline-block;
-  width: 30px;         
-  height: 30px;         
+  width: 30px;
+  height: 30px;
   margin: 0 0.35rem 0 0.25rem;
   background-image: url("https://d2jv02qf7xgjwx.cloudfront.net/customers/726/images/globe_blue.png");
   background-size: contain;
@@ -194,5 +200,3 @@ nde-search-no-results a[href^="https://library.calvin.edu/request/ill"]::before 
 }
 
 /* END No Results Page */
-
-/* can you see this */
