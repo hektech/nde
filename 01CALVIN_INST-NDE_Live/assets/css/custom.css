@@ -128,20 +128,15 @@ nde-login-form-content mat-dialog-content>div.authentication-method-wrapper>div.
 
 
 /* BEGIN Hide Jesus image */
-nde-linked-data-recommendations .thumbnail-image[alt="Photo of Jesus Christ"] {
-  display: none;
-}
-
-nde-linked-data-recommendations .thumbnail-image[alt="Photo of Jesus Christ"]+.thumbnail-license-icon-container {
-  display: none;
-}
-
-nde-person-entity .thumbnail-image[alt="Photo of Jesus Christ"] {
-  display: none;
-}
-
+nde-linked-data-recommendations .thumbnail-image[alt="Photo of Jesus Christ"],
+nde-linked-data-recommendations .thumbnail-image[alt="Photo of Jesus Christ"]+.thumbnail-license-icon-container,
+nde-person-entity .thumbnail-image[alt="Photo of Jesus Christ"],
 nde-person-entity .thumbnail-image[alt="Photo of Jesus Christ"]+.thumbnail-license-icon-container {
   display: none;
+}
+
+nde-virtual-browse-card .carousel-card .mat-mdc-card-header:has(img[alt="Jesus Christ"]) {
+  visibility: hidden;
 }
 
 /* END Hide Jesus image */
