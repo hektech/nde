@@ -65,7 +65,9 @@ div.record-top-bar>nde-record-type>span.record-type {
 }
 
 /* Call Number Selectable */
-nde-physical-availability-line .mat-mdc-button {
+nde-online-availability .mat-mdc-button,
+nde-physical-availability-line .mat-mdc-button,
+nde-record-frbr .mat-mdc-button {
   font-weight: normal;
   -webkit-user-select: text;
   /* Safari */
