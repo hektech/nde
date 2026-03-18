@@ -45,6 +45,14 @@ section.container>main.sub-container>div.search-container>div.top-bar-background
   letter-spacing: .024rem;
 }
 
+/* BEGIN Side Filters Panel */
+/* --- Align item counts to the right ---*/
+.filter-checkbox.mat-mdc-checkbox .mdc-label div {
+    width: 100%;
+}
+
+/* END Side Filters Panel */
+
 /* Adjust thumbnail image width in search results */
 prm-search-result-thumbnail-container img {
   width: auto;
