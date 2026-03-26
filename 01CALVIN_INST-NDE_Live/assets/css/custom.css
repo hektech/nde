@@ -103,6 +103,11 @@ nde-requests nde-login a::after {
   content: "to place ON HOLD"
 }
 
+/* Remove "Full Text Availability" heading */
+nde-view-it > nde-view-it-section > div.view-it-title {
+display:none;
+}
+
 /* show plus sign when collapsed */
 .mat-expansion-panel-header-description mat-icon.nde-mat-icon-size-default {
   min-width: 20px;
