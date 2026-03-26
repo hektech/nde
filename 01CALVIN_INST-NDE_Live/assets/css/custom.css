@@ -24,6 +24,8 @@
 :root {
   --sys-primary: #8c2131;
   --sys-outline: #555;
+  --sys-background: #f7f9ff;
+  --whiteBG: #f5f3ef;
 }
 
 html {

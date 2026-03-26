@@ -426,7 +426,6 @@ h2.carousel-title {
 
 
 .carousel {
-  background-color: white;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
