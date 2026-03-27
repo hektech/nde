@@ -26,6 +26,9 @@
   --sys-outline: #555;
   --sys-background: #f7f9ff;
   --whiteBG: #f5f3ef;
+  --lightBG: #e8e6dc;
+  --darkBG: #d4d0c3;
+  --sys-inverse-on-surface: #e8e6dc;
 }
 
 html {
@@ -45,6 +48,26 @@ section.container>main.sub-container>div.search-container>div.top-bar-background
   font-weight: normal;
   text-shadow: 2px 2px 10px rgba(0, 0, 0, .5);
   letter-spacing: .024rem;
+}
+
+/* Search bar filters button */
+.search-dropdown-container-button {
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.08);
+    background-color: var(--lightBG) !important;
+}
+
+/* Top buttons */
+button.quick-filter-btn.mat-mdc-outlined-button {
+    color: #333;
+    background-color: var(--sys-inverse-on-surface) !important;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.08);
+    border-color: var(--border);
+}
+
+/* Selected top button */
+button.quick-filter-btn.mat-mdc-outlined-button.quick-filter-btn-active {
+    background-color: buttonface !important;
+    color: var(--sys-primary);
 }
 
 /* BEGIN Side Filters Panel */
