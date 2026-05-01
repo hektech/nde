@@ -209,9 +209,17 @@ nde-virtual-browse-card .carousel-card .mat-mdc-card-header:has(img[alt="Jesus C
   color: #333;
 }
 
-/*hide main Mel and ILL*/
+/*hide Mel and ILL that usually appears at the bottom*/
 nde-search-results:has(nde-search-no-results)+ng-component:has(div.ill_recommender) {
   display: none;
+}
+
+/*add News icon*/
+nde-search-no-results a[href^="https://calvin.primo.exlibrisgroup.com/nde/npsearch"]::before {
+  content: "🗞️";
+  display: inline-block;
+  font-size: 1.5rem;
+  margin: 0 0.25rem 0 0;
 }
 
 /*add MeL icon*/
