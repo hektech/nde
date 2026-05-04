@@ -43,7 +43,7 @@ html {
   align-items: center;
 }
 
-section.container>main.sub-container>div.search-container>div.top-bar-background-image>div.custom-search-bar-container>h2 {
+section.container>main.sub-container>div.search-container>div.top-bar-background-image>div.custom-search-bar-container>h1 {
   font-family: 'Fjalla One', sans-serif;
   font-weight: normal;
   text-shadow: 2px 2px 10px rgba(0, 0, 0, .5);
