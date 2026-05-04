@@ -64,13 +64,13 @@ console.log('Helo from custom js');
   document.head.appendChild(inlineScript);
 })();
 
-// Redirect openurl to Primo
-(function () {
-  let currentURL = window.location.href;
-  if (currentURL.includes('openurl?')) {
-    let newUrl = new URL(currentURL);
-    newUrl.pathname = "/discovery/openurl";
-    newUrl.searchParams.set("vid", "01CALVIN_INST:PrimoOpenURL");
-    window.location.href = newUrl;
-  }
-})();
+// // Redirect openurl to Primo
+// (function () {
+//   let currentURL = window.location.href;
+//   if (currentURL.includes('openurl?')) {
+//     let newUrl = new URL(currentURL);
+//     newUrl.pathname = "/discovery/openurl";
+//     newUrl.searchParams.set("vid", "01CALVIN_INST:PrimoOpenURL");
+//     window.location.href = newUrl;
+//   }
+// })();
