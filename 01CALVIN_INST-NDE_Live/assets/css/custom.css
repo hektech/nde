@@ -226,6 +226,12 @@ nde-virtual-browse-card .carousel-card .mat-mdc-card-header:has(img[alt="Jesus C
 #list-of-suggestions > li:not(:first-child) {
   display:none;
 }
+#list-of-suggestions > li {
+  margin:0;
+}
+#list-of-suggestions > li::before {
+  display:none
+}
 
 /*hide Mel and ILL that usually appears at the bottom*/
 nde-search-results:has(nde-search-no-results)+ng-component:has(div.ill_recommender) {
