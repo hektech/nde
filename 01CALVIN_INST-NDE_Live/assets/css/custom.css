@@ -48,28 +48,37 @@ section.container>main.sub-container>div.search-container>div.top-bar-background
 
 /* Search bar filters button */
 .search-dropdown-container-button {
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.08);
-    background-color: var(--lightBG) !important;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.08);
+  background-color: var(--lightBG) !important;
+}
+
+/* limit spacing between box and results */
+nde-top-bar>.top-bar-container[data-height-id="topBarContainer"] {
+  padding-bottom: 0.5rem;
+}
+
+#expand-results-options-line {
+  margin-top: 0.5rem;
 }
 
 /* Top buttons */
 button.quick-filter-btn.mat-mdc-outlined-button {
-    color: #333;
-    background-color: var(--sys-inverse-on-surface) !important;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.08);
-    border-color: var(--border);
+  color: #333;
+  background-color: var(--sys-inverse-on-surface) !important;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.08);
+  border-color: var(--border);
 }
 
 /* Selected top button */
 button.quick-filter-btn.mat-mdc-outlined-button.quick-filter-btn-active {
-    background-color: buttonface !important;
-    color: var(--sys-primary);
+  background-color: buttonface !important;
+  color: var(--sys-primary);
 }
 
 /* BEGIN Side Filters Panel */
 /* --- Align item counts to the right ---*/
 .filter-checkbox.mat-mdc-checkbox .mdc-label div {
-    width: 100%;
+  width: 100%;
 }
 
 /* END Side Filters Panel */
@@ -126,26 +135,27 @@ nde-requests nde-login a::after {
 
 /*BEGIN improve request success modal */
 nde-success-request mat-dialog-content>div.success-msg {
-flex-flow: column;
-text-align: center;
-align-items: center !important;
+  flex-flow: column;
+  text-align: center;
+  align-items: center !important;
 }
 
 nde-success-request mat-dialog-content>div.success-msg>mat-icon {
-  margin-inline-end:0 !important;
-  margin-bottom:0.5rem;
-  width:48px !important;
-  height:48px !important;
+  margin-inline-end: 0 !important;
+  margin-bottom: 0.5rem;
+  width: 48px !important;
+  height: 48px !important;
 }
 
 nde-success-request a.go-to-request {
   text-decoration: underline;
 }
+
 /*END improve request success modal */
 
 /* Remove "Full Text Availability" heading */
-nde-view-it > nde-view-it-section > div.view-it-title {
-display:none;
+nde-view-it>nde-view-it-section>div.view-it-title {
+  display: none;
 }
 
 /* show plus sign when collapsed */
@@ -206,27 +216,31 @@ nde-virtual-browse-card .carousel-card .mat-mdc-card-header:has(img[alt="Jesus C
 }
 
 /*hide description*/
-.no-record-found + div.no-results {
+.no-record-found+div.no-results {
   display: none;
 }
 
 /*modify suggestions box*/
 .we-suggest-container {
-  padding:0 !important;
-  border:none !important;
-  margin:0 2rem !important;
+  padding: 0 !important;
+  border: none !important;
+  margin: 0 2rem !important;
 }
+
 .we-suggest-container>nde-expand-options.gap-1 {
-  gap:0;
+  gap: 0;
 }
-#list-of-suggestions > li:not(:first-child) {
-  display:none;
+
+#list-of-suggestions>li:not(:first-child) {
+  display: none;
 }
-#list-of-suggestions > li {
-  margin:0;
+
+#list-of-suggestions>li {
+  margin: 0;
 }
-#list-of-suggestions > li::before {
-  display:none
+
+#list-of-suggestions>li::before {
+  display: none
 }
 
 /*hide Mel and ILL that usually appears at the bottom*/
