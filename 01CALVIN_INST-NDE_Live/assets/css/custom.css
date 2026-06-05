@@ -164,6 +164,10 @@ nde-view-it>nde-view-it-section>div.view-it-title {
   min-height: 20px;
 }
 
+/* add to Sign In messaging under "Get It" */
+nde-notification[message="nui.request.signin_additional"] nde-login button span.mdc-button__label::after {
+  content: "for all options";
+}
 
 /* BEGIN login page */
 nde-login-form-content>div>div>h1.login-header.dedicated-login-page-header {
