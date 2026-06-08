@@ -273,21 +273,8 @@ nde-search-no-results a[href^="https://search.mel.org"]::before {
   vertical-align: middle;
 }
 
-/*add Worldcat icon*/
-nde-search-no-results a[href^="https://search.worldcat.org"]::before {
-  content: "";
-  display: inline-block;
-  width: 36px;
-  height: 36px;
-  margin-right: 0.35rem;
-  background-image: url("https://d2jv02qf7xgjwx.cloudfront.net/customers/726/images/worldcat-logo_100x100.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  vertical-align: middle;
-}
-
 /*add ILL icon*/
-nde-search-no-results a[href^="https://library.calvin.edu/request/ill"]::before {
+nde-search-no-results a[href^="https://calvin.primo.exlibrisgroup.com/nde/blankIll"]::before {
   content: "";
   display: inline-block;
   width: 30px;
@@ -300,3 +287,31 @@ nde-search-no-results a[href^="https://library.calvin.edu/request/ill"]::before 
 }
 
 /* END No Results Page */
+
+/* STYLE ALMA REQUEST BUTTONS LIKE RAPIDO REQUEST TILES (Primo VE original UI) */
+/* Colors reflect site-specific modifications and may need to be revised per site */
+/* There may be a fourth AlmaRequest variant that can be added */
+/* ====================================================================
+Physical Request Card Original UI
+Applies to:
+– AlmaRequest
+– AlmaRequestOther
+– AlmaRequestAnyItem
+==================================================================== */
+
+/* Request, GES (e.g. MEL) Card */
+mat-card.mat-mdc-card.request-card {
+  background-color: var(--lightBG);
+  padding: 24px;
+  margin: 0 0 16px;
+  border-radius: .5rem;
+  width: 100%;
+  align-items: start;
+}
+mat-card.mat-mdc-card.request-card > mat-card-content.column-for-requests-container {
+  gap: 1.5rem;
+}
+div.request-card-title-subtitle > div.request-title {
+  font-weight:550;
+  color: var(--sys-primary);
+}
