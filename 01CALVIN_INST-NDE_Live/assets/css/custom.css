@@ -288,16 +288,15 @@ nde-search-no-results a[href^="https://calvin.primo.exlibrisgroup.com/nde/blankI
 
 /* END No Results Page */
 
-/* STYLE ALMA REQUEST BUTTONS LIKE RAPIDO REQUEST TILES (Primo VE original UI) */
-/* Colors reflect site-specific modifications and may need to be revised per site */
-/* There may be a fourth AlmaRequest variant that can be added */
-/* ====================================================================
-Physical Request Card Original UI
-Applies to:
-– AlmaRequest
-– AlmaRequestOther
-– AlmaRequestAnyItem
-==================================================================== */
+/* Rapido Banner */
+div.nde-rapido-links-main-content:has(span[data-qa="rapido-still-not-found-part1"]) {
+  background:none;
+}
+div.nde-rapido-links-main-content span[data-qa="rapido-still-not-found"] {
+  display:none;
+}
+
+/* STYLE ALMA REQUEST BUTTONS and MeLCAT LIKE RAPIDO REQUEST TILES */
 
 /* Request, GES (e.g. MEL) Card */
 mat-card.mat-mdc-card.request-card {
@@ -314,4 +313,20 @@ mat-card.mat-mdc-card.request-card > mat-card-content.column-for-requests-contai
 div.request-card-title-subtitle > div.request-title {
   font-weight:550;
   color: var(--sys-primary);
+}
+.request-card .mat-icon svg path {
+  stroke: revert-layer !important;
+}
+nde-request-card a.mat-mdc-button:not(:disabled) {
+  color: white;
+  background-color: var(--sys-primary);
+}
+nde-request-card a.mat-mdc-button .mat-icon {
+  fill: white;
+}
+
+/* Rapido Tiles */
+.nde-ngrs-offer-drawer-offer-container,
+.nde-ngrs-offer-drawer-offer-container-one-offer-style {
+  padding: 24px !important;
 }
