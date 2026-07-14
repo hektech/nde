@@ -32,7 +32,7 @@
 }
 
 html {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .light-text {
@@ -307,12 +307,23 @@ nde-search-no-results a[href^="https://calvin.primo.exlibrisgroup.com/nde/blankI
 /* END No Results Page */
 
 /* Rapido Banner */
+nde-rapido-links {
+  order: -1;
+}
+
 div.nde-rapido-links-main-content {
   background: none !important;
+  border: 1px solid var(--border);
+  border-radius: 12px !important;
+  margin-top: 0.5rem;
 }
 
 div.nde-rapido-links-main-content span[data-qa="rapido-still-not-found"] {
   display: none;
+}
+
+nde-rapido-links>div.top-bar-container.nde-rapido-links-main-content {
+  /* padding-block: 0.33rem !important; */
 }
 
 /* STYLE ALMA REQUEST BUTTONS and MeLCAT LIKE RAPIDO REQUEST TILES */
@@ -383,4 +394,37 @@ nde-record-availability button.available-at-button[aria-label^="On shelf at"] .a
 
 nde-record-availability mat-icon:has(+ .available-at-button) {
   display: none;
+}
+
+/* BEGIN Main Content */
+#resultsTopBarContainer {
+  border: 1px solid var(--sys-outline);
+  border-bottom: none;
+}
+#searchResults {
+  border: 1px solid var(--sys-outline);
+  border-top: none;
+}
+.mat-typography nde-highlight.mat-body-large,
+nde-full-display-service-container .mat-title-medium {
+  font-size: 1.1rem !important;
+}
+.nde-ngrs-offer-drawer-dark-text,
+.nde-ngrs-offer-drawer-text-container,
+nde-location .getit-library-title,
+nde-location {
+  font-size: 0.875rem !important;
+  line-height: 1.25rem !important;
+}
+
+nde-location-items-container .mat-mdc-icon-button svg {
+  width: inherit;
+}
+
+nde-full-display-navigation mat-icon {
+  height: inherit !important;
+}
+
+nde-search-results-container .resource-recommenders-container {
+  margin-top: 0;
 }
