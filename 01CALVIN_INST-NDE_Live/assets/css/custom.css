@@ -32,7 +32,7 @@
 }
 
 html {
-  font-size: 20px;
+  font-size: 19px;
 }
 
 .light-text {
@@ -306,7 +306,41 @@ nde-search-no-results a[href^="https://calvin.primo.exlibrisgroup.com/nde/blankI
 
 /* END No Results Page */
 
-/* Rapido Banner */
+/* BEGIN Availability label */
+
+nde-record-availability button.available-at-button:hover {
+  background-color: #ede3e0;
+}
+
+nde-record-availability button.available-at-button.basic-button.mdc-button.mat-mdc-button:hover .mdc-button__label {
+  text-decoration: none;
+}
+
+nde-record-availability button.available-at-button[aria-label^="On shelf at"] {
+  padding: 4px 10px;
+  border: 1px solid var(--sys-primary);
+  border-radius: .3125rem;
+  margin-top: 8px;
+}
+
+nde-record-availability button.available-at-button[aria-label^="On shelf at"] .availability-code:before {
+  content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden='true' focusable='false'><circle cx='12' cy='12' r='10' fill='%23368704'/></svg>");
+  color: #368704;
+  display: inline-block;
+  margin-right: 8px;
+  height: 11px;
+  width: 11px;
+}
+
+nde-record-availability mat-icon:has(+ .available-at-button) {
+  display: none;
+}
+
+/* END Availability label */
+
+/* BEGIN Results Page */
+
+/* Rapido banner */
 nde-rapido-links {
   order: -1;
 }
@@ -324,6 +358,82 @@ div.nde-rapido-links-main-content span[data-qa="rapido-still-not-found"] {
 
 nde-rapido-links>div.top-bar-container.nde-rapido-links-main-content {
   /* padding-block: 0.33rem !important; */
+}
+
+#resultsTopBarContainer {
+  border: 1px solid var(--sys-outline);
+  border-bottom: none;
+}
+
+/* the side titles */
+nde-search-filters-side-nav .mat-title-medium,
+.mat-typography .mat-title-medium {
+  font-size: 0.95rem !important;
+  /* was 1rem */
+}
+
+/* the side body */
+nde-search-filters-side-nav .mat-mdc-slide-toggle .mat-internal-form-field,
+nde-search-filters-side-nav .mat-mdc-button {
+  font-size: 0.85rem !important;
+  /* was 0.875rem */
+}
+
+/* Search results */
+#searchResults {
+  border: 1px solid var(--sys-outline);
+  border-top: none;
+}
+
+/* Titles */
+.mat-typography nde-highlight.mat-body-large,
+nde-full-display-service-container .mat-title-medium {
+  font-size: 1.1rem !important;
+}
+
+/* END Results Page */
+
+/* BEGIN Record Details */
+
+nde-view-it-card .mat-body-large,
+.nde-ngrs-offer-drawer-dark-text,
+.request-card-title-subtitle,
+.request-title,
+.nde-ngrs-offer-drawer-text-container,
+nde-location .getit-library-title,
+nde-location {
+  font-size: 0.875rem !important;
+  line-height: 1.25rem !important;
+}
+
+nde-location-items-container .mat-mdc-icon-button svg {
+  width: inherit;
+}
+
+nde-full-display-navigation mat-icon {
+  height: inherit !important;
+}
+
+nde-search-results-container .resource-recommenders-container {
+  margin-top: 0 !important;
+}
+
+/* Tile Titles */
+div.request-card-title-subtitle>div.request-title {
+  font-weight: 550;
+  color: var(--sys-primary);
+}
+
+/* MeLCat request tile */
+nde-request-card>mat-card.mat-mdc-card.request-card {
+  padding: 0;
+}
+
+/* rapido request tile */
+.nde-ngrs-offer-drawer-icon {
+  margin-right: 1rem !important;
+  margin-left: 0 !important;
+  width: 3rem !important;
 }
 
 /* STYLE ALMA REQUEST BUTTONS and MeLCAT LIKE RAPIDO REQUEST TILES */
@@ -362,69 +472,9 @@ nde-request-card a.mat-mdc-button .mat-icon {
 
 /* Rapido Tiles */
 .nde-ngrs-offer-drawer-offer-container,
+.nde-ngrs-offer-drawer-offer-container,
 .nde-ngrs-offer-drawer-offer-container-one-offer-style {
   padding: 24px !important;
 }
 
-/* Brief Results - Availability */
-
-nde-record-availability button.available-at-button:hover {
-  background-color: #ede3e0;
-}
-
-nde-record-availability button.available-at-button.basic-button.mdc-button.mat-mdc-button:hover .mdc-button__label {
-  text-decoration: none;
-}
-
-nde-record-availability button.available-at-button[aria-label^="On shelf at"] {
-  padding: 4px 10px;
-  border: 1px solid var(--sys-primary);
-  border-radius: .3125rem;
-  margin-top: 8px;
-}
-
-nde-record-availability button.available-at-button[aria-label^="On shelf at"] .availability-code:before {
-  content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden='true' focusable='false'><circle cx='12' cy='12' r='10' fill='%23368704'/></svg>");
-  color: #368704;
-  display: inline-block;
-  margin-right: 8px;
-  height: 11px;
-  width: 11px;
-}
-
-nde-record-availability mat-icon:has(+ .available-at-button) {
-  display: none;
-}
-
-/* BEGIN Main Content */
-#resultsTopBarContainer {
-  border: 1px solid var(--sys-outline);
-  border-bottom: none;
-}
-#searchResults {
-  border: 1px solid var(--sys-outline);
-  border-top: none;
-}
-.mat-typography nde-highlight.mat-body-large,
-nde-full-display-service-container .mat-title-medium {
-  font-size: 1.1rem !important;
-}
-.nde-ngrs-offer-drawer-dark-text,
-.nde-ngrs-offer-drawer-text-container,
-nde-location .getit-library-title,
-nde-location {
-  font-size: 0.875rem !important;
-  line-height: 1.25rem !important;
-}
-
-nde-location-items-container .mat-mdc-icon-button svg {
-  width: inherit;
-}
-
-nde-full-display-navigation mat-icon {
-  height: inherit !important;
-}
-
-nde-search-results-container .resource-recommenders-container {
-  margin-top: 0 !important;
-}
+/* END Record Details */
