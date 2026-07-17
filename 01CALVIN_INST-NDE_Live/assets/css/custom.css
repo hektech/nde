@@ -400,6 +400,7 @@ nde-view-it-card .mat-body-large,
 .request-card-title-subtitle,
 .request-title,
 .nde-ngrs-offer-drawer-text-container,
+.nde-ngrs-no-offer-message-main-tile,
 nde-location .getit-library-title,
 nde-location {
   font-size: 0.875rem !important;
@@ -424,10 +425,7 @@ div.request-card-title-subtitle>div.request-title {
   color: var(--sys-primary);
 }
 
-/* MeLCat request tile */
-nde-request-card>mat-card.mat-mdc-card.request-card {
-  padding: 0;
-}
+
 
 /* rapido request tile */
 .nde-ngrs-offer-drawer-icon {
@@ -441,7 +439,6 @@ nde-request-card>mat-card.mat-mdc-card.request-card {
 /* Request, GES (e.g. MEL) Card */
 mat-card.mat-mdc-card.request-card {
   background-color: var(--lightBG);
-  padding: 24px;
   margin: 0 0 16px;
   border-radius: .5rem;
   width: 100%;
@@ -471,6 +468,12 @@ nde-request-card a.mat-mdc-button .mat-icon {
 }
 
 /* Rapido Tiles */
+@media (max-width: 767.98px) {
+  nde-ngrs-offer {
+    min-width: unset !important;
+  }
+}
+
 .nde-ngrs-offer-drawer-offer-container,
 .nde-ngrs-offer-drawer-offer-container,
 .nde-ngrs-offer-drawer-offer-container-one-offer-style {
