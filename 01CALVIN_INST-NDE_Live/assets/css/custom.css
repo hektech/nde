@@ -75,6 +75,19 @@ button.quick-filter-btn.mat-mdc-outlined-button.quick-filter-btn-active {
   color: var(--sys-primary);
 }
 
+/* BEGIN Landing Page */
+nde-home-page-showcase > div.showcase-container > a > h2.mat-headline-medium {
+  font-family: 'Fjalla One', sans-serif;
+  text-align: center;
+}
+
+nde-home-page-showcase>div>a {
+  margin-bottom: 1.5rem;
+  margin-top: -2rem;
+}
+
+/* END Landing Page */
+
 /* BEGIN Side Filters Panel */
 /* --- Align item counts to the right ---*/
 .filter-checkbox.mat-mdc-checkbox .mdc-label div {
@@ -462,6 +475,7 @@ nde-search-no-results a[href^="https://library.calvin.edu/research/librarians"]:
   background-repeat: no-repeat;
   vertical-align: middle;
 }
+
 /*add News icon*/
 nde-search-no-results a[href^="https://calvin.primo.exlibrisgroup.com/nde/npsearch"]::before {
   content: "🗞️";
@@ -503,4 +517,5 @@ nde-search-no-results a[href^="https://calvin.primo.exlibrisgroup.com/nde/blankI
   width: 22px;
   height: 22px;
 }
+
 /* END My Library Account */
