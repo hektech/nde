@@ -32,7 +32,7 @@
 }
 
 html {
-  font-size: 19px;
+  font-size: 18px;
 }
 
 .light-text {
@@ -497,3 +497,10 @@ nde-search-no-results a[href^="https://calvin.primo.exlibrisgroup.com/nde/blankI
 }
 
 /* END No Results Page */
+
+/* BEGIN My Library Account */
+.mat-mdc-button>.mat-icon.nde-mat-icon-size-medium {
+  width: 22px;
+  height: 22px;
+}
+/* END My Library Account */
